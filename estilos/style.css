@@ -24,11 +24,11 @@ body {
 }
 
 .game {
-    width: 910px;
+    max-width: 910px;
     background-color: aquamarine;
     display: flex;
     justify-content: space-between;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -50,6 +50,33 @@ body {
     position: absolute;
 }
 
-@media (width<400px){
+@media (max-width: 615px) {
+    body {
+        background-color: blue;
+    }
 
+    .title {
+        background-color: azure;
+        width: 312px;
+        height: 63px;
+        margin-bottom: 37px;
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        flex-direction: column;
+        margin: 0px auto 34px auto;
+    }
+
+    .game {
+        background-color: aquamarine;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
