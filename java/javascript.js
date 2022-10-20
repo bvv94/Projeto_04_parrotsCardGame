@@ -1,4 +1,3 @@
-
 let jogo = Number(prompt('Com quantas cartas deseja jogar?'))
 
 do {
@@ -7,15 +6,37 @@ do {
     }
 } while ((jogo % 2 !== 0) || (jogo < 4) || (jogo > 14));
 
+
+const baralho = ['<div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div>',
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+`<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"></div></li>`,
+];
+const baralhovirado = ['<div class="card"><img src="./files/bobrossparrot.gif"></div></li>',
+`<li><div class="card"><img src="./files/explodyparrot.gif"></div>'</li>`,
+`<li><div class="card"><img src="./files/fiestaparrot.git"></div>'</li>`,
+`<li><div class="card"><img src="./files/metalparrot.gif"></div>'</li>`,
+`<li><div class="card"><img src="./files/revertiitparrot"></div>'</li>`,
+`<li><div class="card"><img src="./files/tripletsparrot.gif"></div>'</li>`,
+`<li><div class="card"><img src="./files/unicornparrot.gif></div>'</li>`];
 const cards = []; //array das cartas
+const tabuleiro = document.querySelector(".game");
+console.log(tabuleiro);
 
-i = 0;
-while (i <= jogo) {
-    cards.push(document.querySelector('card'));
-    console.log(card[i]);
+for (i=0; i<jogo; i++) {
+    tabuleiro.innerHTML += baralho[i];
+    console.log(baralho[i]);
 }
-
-
 
 function game() {
 
