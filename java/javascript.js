@@ -48,30 +48,33 @@ let img = [];
 let imggif = [];
 
 function turn(card) { //peguei a carta
-    
+    /*   ----------VIRA A PRIMEIRA AQUI
     img = document.querySelector(".back"); //dentro da carta pegar a img e trocar pelo gif
     img.classList.add("escondido"); //esconde o parrot
     imggif = document.querySelector(".gif");
     imggif.classList.remove("escondido");//mostra gif
-
+            -------TERMINA DE VIRAR SÓ A PRIMEIRA */
+      
+    card.classList.add('clicado');
+    for (let i = 0; i < partida.length; i++) {
+        if (partida[i].classList.contains('clicado')) {
+            img[i] = document.querySelector(".back"); //dentro da carta pegar a img e trocar pelo gif
+            img[i].classList.add("escondido"); //esconde o parrot
+            imggif = document.querySelector(".gif");
+            imggif[i].classList.remove("escondido");//mostra gif
+        }
+    }
     /*
-      for (i = 0; i < partida.length; i++) {
-          let img[i] = document.querySelector(".clicado .back"); //dentro da carta pegar a img e trocar pelo gif
-          img[i].classList.add("escondido"); //esconde o parrot
-          let imggif = document.querySelector(".clicado .gif");
-          imggif[i].classList.remove("escondido");//mostra gif
-      } //
-
- for (i = 0; i < partida.length; i++) {
-     if (x[i].classList.contains('selecionado')) {
-         let teste = x.innerHTML;
-         console.log(teste);
-         let img = document.querySelector(".selecionado .back"); //dentro da carta pegar a img e trocar pelo gif
-         console.log(img);
-         img.classList.add("escondido"); //esconde o parrot
-         let imggif = document.querySelector(".selecionado.gif");
-         imggif.classList.remove("escondido");//mostra gif
-     }
- }*/
+     for (i = 0; i < partida.length; i++) {
+         if (x[i].classList.contains('selecionado')) {
+             let teste = x.innerHTML;
+             console.log(teste);
+             let img = document.querySelector(".selecionado .back"); //dentro da carta pegar a img e trocar pelo gif
+             console.log(img);
+             img.classList.add("escondido"); //esconde o parrot
+             let imggif = document.querySelector(".selecionado.gif");
+             imggif.classList.remove("escondido");//mostra gif
+         }
+     }*/
 }
 
