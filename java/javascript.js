@@ -48,22 +48,25 @@ let img = [];
 let imggif = [];
 
 function turn(card) { //peguei a carta
-    /*   ----------VIRA A PRIMEIRA AQUI
-    img = document.querySelector(".back"); //dentro da carta pegar a img e trocar pelo gif
+
+    card.classList.add('clicado');
+      // ----------VIRA A PRIMEIRA AQUI
+    img = document.querySelector(".clicado .back"); //dentro da carta pegar a img e trocar pelo gif
     img.classList.add("escondido"); //esconde o parrot
-    imggif = document.querySelector(".gif");
+    imggif = document.querySelector(".clicado .gif");
     imggif.classList.remove("escondido");//mostra gif
-            -------TERMINA DE VIRAR SÓ A PRIMEIRA */
-      
+    
+          // -------TERMINA DE VIRAR SÓ A PRIMEIRA 
+/*
     card.classList.add('clicado');
     for (let i = 0; i < partida.length; i++) {
         if (partida[i].classList.contains('clicado')) {
             img[i] = document.querySelector(".back"); //dentro da carta pegar a img e trocar pelo gif
             img[i].classList.add("escondido"); //esconde o parrot
-            imggif = document.querySelector(".gif");
+            imggif[i] = document.querySelector(".gif");
             imggif[i].classList.remove("escondido");//mostra gif
         }
-    }
+    }*/
     /*
      for (i = 0; i < partida.length; i++) {
          if (x[i].classList.contains('selecionado')) {
