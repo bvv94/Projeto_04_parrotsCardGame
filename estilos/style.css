@@ -42,26 +42,35 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative
+    position: relative;
 }
 
-.back{
+.back {
     width: 100px;
     height: 100px;
     position: absolute;
+    transition: all 300ms linear;
+    transform: rotateY(180deg);
 }
-.gif{
+
+.gif {
     width: 100px;
     height: 100px;
     position: absolute;
+    transition: all 300ms linear;
+    transform: rotateY(180deg);
+
 }
-.escondido{
+
+.escondido {
     display: none;
+
 }
-div:hover{
+
+div:hover {
     cursor: pointer;
-    background-color: red;
 }
+
 
 @media (max-width: 615px) {
     body {
@@ -92,4 +101,5 @@ div:hover{
         justify-content: center;
         align-items: center;
     }
+
 }
