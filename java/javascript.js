@@ -8,20 +8,20 @@ do {
 
 
 const baralho = [
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/bobrossparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/bobrossparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/explodyparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/explodyparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/fiestaparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/fiestaparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/metalparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/metalparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/revertitparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/revertitparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/tripletsparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/tripletsparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/unicornparrot.gif"></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><img class="back" src="./files/back.png"><img class="gif escondido" src="./files/unicornparrot.gif"></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/bobrossparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/bobrossparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/explodyparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/explodyparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/fiestaparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/fiestaparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/metalparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/metalparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/revertitparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/revertitparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/tripletsparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/tripletsparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/unicornparrot.gif"></div></div></li>`,
+    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/unicornparrot.gif"></div></div></li>`,
 ];
 const partida = []; //array com cartas pelo usuario
 
@@ -42,42 +42,57 @@ for (i = 0; i < jogo; i++) {
 
 //---------AQUI COMEÇA A BRINCADEIRA ------------------
 
-
-console.log(partida);
 let img = [];
 let imggif = [];
+//let par = [];
+let carta1 = '';
+let carta2 = '';
+let cont = 0;
 
-function turn(card) { //peguei a carta
+function turn(card) { //virando a carta
 
-    card.classList.add('clicado');
-      // ----------VIRA A PRIMEIRA AQUI
+    card.classList.add("clicado");
     img = document.querySelector(".clicado .back"); //dentro da carta pegar a img e trocar pelo gif
     img.classList.add("escondido"); //esconde o parrot
     imggif = document.querySelector(".clicado .gif");
     imggif.classList.remove("escondido");//mostra gif
-    
-          // -------TERMINA DE VIRAR SÓ A PRIMEIRA 
+    card.classList.remove("clicado");
+
+    if (cont == 0) {
+        //carta1 = '';
+        //   par.push(card.innerHTML);
+        carta1 = card.innerHTML;
+        console.log(carta1);
+    }
+    else if (cont == 1) {
+        // carta2 = '';
+        // par.push(card.innerHTML);
+        carta2 = card.innerHTML;
+        console.log(carta2);
+    }
+
+    if (cont == 2) {
+        cont = 0;
+        comparacao();
+    } else {
+        cont++;
+    }
+}
 /*
-    card.classList.add('clicado');
-    for (let i = 0; i < partida.length; i++) {
-        if (partida[i].classList.contains('clicado')) {
-            img[i] = document.querySelector(".back"); //dentro da carta pegar a img e trocar pelo gif
-            img[i].classList.add("escondido"); //esconde o parrot
-            imggif[i] = document.querySelector(".gif");
-            imggif[i].classList.remove("escondido");//mostra gif
-        }
-    }*/
-    /*
-     for (i = 0; i < partida.length; i++) {
-         if (x[i].classList.contains('selecionado')) {
-             let teste = x.innerHTML;
-             console.log(teste);
-             let img = document.querySelector(".selecionado .back"); //dentro da carta pegar a img e trocar pelo gif
-             console.log(img);
-             img.classList.add("escondido"); //esconde o parrot
-             let imggif = document.querySelector(".selecionado.gif");
-             imggif.classList.remove("escondido");//mostra gif
-         }
-     }*/
+function unturn() {
+    const cartas = document.querySelectorAll('.clicado');
+    for (let i = 0; i < cartas.length; i++) {
+        cartas[i].classList.remove('clicado');
+    }
 }
 
+function comparacao() {
+    if (carta1 == carta2) {
+        setTimeout(alert('Você acertou'), 0.5);
+    }
+    else if (carta1 != carta2) {
+        setTimeout(unturn, 2000);
+    }
+    carta1 = '';
+    carta2 = '';
+}*/
