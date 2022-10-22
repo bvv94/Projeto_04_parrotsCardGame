@@ -8,26 +8,28 @@ do {
 
 
 const baralho = [
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/bobrossparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/bobrossparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/explodyparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/explodyparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/fiestaparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/fiestaparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/metalparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/metalparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/revertitparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/revertitparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/tripletsparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/tripletsparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/unicornparrot.gif"></div></div></li>`,
-    `<li><div onclick="turn(this)" class="card"><div class="carta"><img class= "back" src="./files/back.png"></div><div class="carta"><img class="gif escondido" src="./files/unicornparrot.gif"></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/bobrossparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/bobrossparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/explodyparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/explodyparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/fiestaparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/fiestaparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/metalparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/metalparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/revertitparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/revertitparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/tripletsparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/tripletsparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/unicornparrot.gif" /></div></div></li>`,
+    `<li class="card" onclick="turn(this)"><div class="front-face face"><div class="carta"><img class="back" src="./files/back.png" /></div></div><div class="back-face face"><div class="carta"><img class="gif escondido" src="./files/unicornparrot.gif" /></div></div></li>`
 ];
+
 const partida = []; //array com cartas pelo usuario
 
 for (i = 0; i < jogo; i++) {
-    partida.push(baralho[i]); //coloco cartas no tabuleiro conforme input
+    partida.push(baralho[i]);//coloco cartas no tabuleiro conforme input
 }
+console.log(partida);
 partida.sort(comparador); // embaralha partida
 
 function comparador() { //embaralhador
@@ -44,7 +46,7 @@ for (i = 0; i < jogo; i++) {
 
 let img = [];
 let imggif = [];
-//let par = [];
+let par = [];
 let carta1 = '';
 let carta2 = '';
 let cont = 0;
@@ -59,16 +61,10 @@ function turn(card) { //virando a carta
     card.classList.remove("clicado");
 
     if (cont == 0) {
-        //carta1 = '';
-        //   par.push(card.innerHTML);
-        carta1 = card.innerHTML;
-        console.log(carta1);
+        par.push((card.parentNode).innerHTML);
     }
     else if (cont == 1) {
-        // carta2 = '';
-        // par.push(card.innerHTML);
-        carta2 = card.innerHTML;
-        console.log(carta2);
+        par.push((card.parentNode).innerHTML);
     }
 
     if (cont == 2) {
@@ -78,21 +74,22 @@ function turn(card) { //virando a carta
         cont++;
     }
 }
-/*
-function unturn() {
-    const cartas = document.querySelectorAll('.clicado');
-    for (let i = 0; i < cartas.length; i++) {
-        cartas[i].classList.remove('clicado');
-    }
-}
 
 function comparacao() {
-    if (carta1 == carta2) {
-        setTimeout(alert('Você acertou'), 0.5);
+    if (par[0] == par[1]) {
+        setTimeout(acertou, 2000);
     }
-    else if (carta1 != carta2) {
-        setTimeout(unturn, 2000);
+    else {
+        setTimeout(errou, 2000);
     }
-    carta1 = '';
-    carta2 = '';
-}*/
+}
+function acertou() {
+    alert('Você acertou');
+}
+
+function errou() {
+    alert('errou');
+    for (let i = 0; i < par.length; i++) {
+        par[i].classList.remove("clicado");
+    }
+}
