@@ -64,9 +64,6 @@ body {
 .virada .front-face {
     transform: rotateY(-180deg);
 }
-.ok{
-    transform: rotateY(-180deg);
-}
 
 .carta {
     width: 100%;

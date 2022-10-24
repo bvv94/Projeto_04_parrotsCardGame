@@ -47,7 +47,7 @@ let par = [];
 let contador = -1;
 
 function turn(carta) { //virando a carta
-    carta.classList.toggle("virada");
+    carta.classList.add("virada");
     contador++;
     par.push(carta.innerHTML);
     console.log(par[0], par[1]);
@@ -60,16 +60,15 @@ function turn(carta) { //virando a carta
 
 function comparacao() {
     if (par[0] === par[1]) {
-        alert('igual');
-
-
+   //     alert('igual');       
     }
     if (par[0] !== par[1]) {
-        alert('diferente');
-        setTimeout(desvirar, 2000);
+ //       alert('diferente');
+        setTimeout(desvirar, 1000)
     }
     par = [];
 }
+
 function desvirar() {
     const cartas = document.querySelectorAll(".virada");
     for (let i = 0; i < cartas.length; i++) {
