@@ -55,25 +55,23 @@ function turn(carta) { //virando a carta
     if (par.length == 2) {
         contador = 0;
         comparacao();
-        // se as cartas forem diferentes
-        // setTimeout(desvirar, 2000);
     }
 }
 
 function comparacao() {
     if (par[0] === par[1]) {
-        alert('entrou igual');
+        alert('igual');
+
 
     }
     if (par[0] !== par[1]) {
-        alert('entrou diferente');
+        alert('diferente');
         setTimeout(desvirar, 2000);
     }
     par = [];
 }
 function desvirar() {
     const cartas = document.querySelectorAll(".virada");
-    console.log(cartas);
     for (let i = 0; i < cartas.length; i++) {
         cartas[i].classList.remove("virada");
     }

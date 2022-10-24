@@ -103,8 +103,7 @@ div:hover {
         margin-bottom: 37px;
         font-size: 36px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
     }
 
     .card {
