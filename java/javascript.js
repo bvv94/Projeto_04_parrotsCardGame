@@ -29,7 +29,6 @@ const partida = []; //array com cartas pelo usuario
 for (i = 0; i < jogo; i++) {
     partida.push(baralho[i]);//coloco cartas no tabuleiro conforme input
 }
-console.log(partida);
 partida.sort(comparador); // embaralha partida
 
 function comparador() { //embaralhador
@@ -44,52 +43,38 @@ for (i = 0; i < jogo; i++) {
 
 //---------AQUI COMEÇA A BRINCADEIRA ------------------
 
-let img = [];
-let imggif = [];
 let par = [];
-let carta1 = '';
-let carta2 = '';
-let cont = 0;
+let contador = -1;
 
-function turn(card) { //virando a carta
+function turn(carta) { //virando a carta
+    carta.classList.toggle("virada");
+    contador++;
+    par.push(carta.innerHTML);
+    console.log(par[0], par[1]);
 
-    card.classList.add("clicado");
-    img = document.querySelector(".clicado .back"); //dentro da carta pegar a img e trocar pelo gif
-    img.classList.add("escondido"); //esconde o parrot
-    imggif = document.querySelector(".clicado .gif");
-    imggif.classList.remove("escondido");//mostra gif
-    card.classList.remove("clicado");
-
-    if (cont == 0) {
-        par.push((card.parentNode).innerHTML);
-    }
-    else if (cont == 1) {
-        par.push((card.parentNode).innerHTML);
-    }
-
-    if (cont == 2) {
-        cont = 0;
+    if (par.length == 2) {
+        contador = 0;
         comparacao();
-    } else {
-        cont++;
+        // se as cartas forem diferentes
+        // setTimeout(desvirar, 2000);
     }
 }
 
 function comparacao() {
-    if (par[0] == par[1]) {
-        setTimeout(acertou, 2000);
-    }
-    else {
-        setTimeout(errou, 2000);
-    }
-}
-function acertou() {
-    alert('Você acertou');
-}
+    if (par[0] === par[1]) {
+        alert('entrou igual');
 
-function errou() {
-    alert('errou');
-    for (let i = 0; i < par.length; i++) {
-        par[i].classList.remove("clicado");
+    }
+    if (par[0] !== par[1]) {
+        alert('entrou diferente');
+        setTimeout(desvirar, 2000);
+    }
+    par = [];
+}
+function desvirar() {
+    const cartas = document.querySelectorAll(".virada");
+    console.log(cartas);
+    for (let i = 0; i < cartas.length; i++) {
+        cartas[i].classList.remove("virada");
     }
 }

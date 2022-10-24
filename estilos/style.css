@@ -25,7 +25,6 @@ body {
 
 .game {
     max-width: 910px;
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,9 +36,9 @@ body {
     height: 146px;
     margin: 17px 17px 17px 17px;
     position: relative;
-  }
+}
 
-  .face {
+.face {
     width: 100%;
     height: 100%;
     background-color: #a7e9af;
@@ -52,37 +51,43 @@ body {
     backface-visibility: hidden;
     transition: all 0.5s;
     transform-style: preserve-3d;
-  }
+}
 
-  .back-face {
+.back-face {
     transform: rotateY(180deg);
-  }
+}
 
-  .card:hover .back-face {
+.virada .back-face {
     transform: rotateY(0deg);
-  }
+}
 
-  .card:hover .front-face {
+.virada .front-face {
     transform: rotateY(-180deg);
-  }
-  .carta {
+}
+.ok{
+    transform: rotateY(-180deg);
+}
+
+.carta {
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .back {
+}
+
+.back {
     width: 100px;
     height: 100px;
     position: absolute;
-  }
-  .gif {
+}
+
+.gif {
     width: 100px;
     height: 100px;
     position: absolute;
-  }
+}
 
 div:hover {
     cursor: pointer;
@@ -90,19 +95,16 @@ div:hover {
 
 
 @media (max-width: 615px) {
-    body {
-        background-color: blue;
-    }
+
 
     .title {
-        background-color: azure;
         width: 312px;
         height: 63px;
         margin-bottom: 37px;
         font-size: 36px;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
 
     .card {
@@ -111,7 +113,6 @@ div:hover {
     }
 
     .game {
-        background-color: aquamarine;
         display: flex;
         margin: auto;
         flex-direction: column;
